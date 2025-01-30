@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: synchrony
+
+  datasource:
+    url: jdbc:h2:mem:synchronydb
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+    hikari:
+      maximum-pool-size: 5
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console  # Access via http://localhost:8080/h2-console
+
+imgur:
+  client-id: 57bd7e44c7f80e2
+  api-url: https://api.imgur.com/3/
